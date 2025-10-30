@@ -5,6 +5,8 @@ This project simulates a dealership performance analytics workflow inspired by r
 
 ![dashboard](https://github.com/digitoby/Automotive-Dealer-Network-Performance-Analysis/blob/main/photos/Dashboard%201.png)
 
+Link to visualization on Tableau Public: https://public.tableau.com/views/Automotive-Operations-Analysis_17617872372150/Dashboard1?:language=en-US&:sid=&:display_count=n&:origin=viz_share_link
+
 ## Workflow
 ### Python (Pandas, NumPy, Matplotlib, Seaborn):
 Generated a synthetic dataset simulating 200+ dealers over 12 months, including service and parts revenue, CSI, retention, and warranty claims. Performed data cleaning, preprocessing, and feature engineering to ensure realistic distributions. Conducted exploratory data analysis to identify trends, correlations, and performance patterns across dealers and regions.
