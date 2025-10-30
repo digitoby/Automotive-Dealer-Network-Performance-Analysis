@@ -1,0 +1,2113 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20252.25.0818.1050                               -->
+<workbook original-version='18.1' source-build='2025.2.2 (20252.25.0818.1050)' source-platform='win' version='18.1' xml:base='https://public.tableau.com' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AccessibleZoneTabOrder />
+    <AnimationOnByDefault />
+    <AutoCreateAndUpdateDSDPhoneLayouts />
+    <DatagraphCoreV1 />
+    <_.fcp.DatagraphNodeAxisTitle.true...DatagraphNodeAxisTitle />
+    <DatagraphNodeSingleValueFieldV1 />
+    <_.fcp.IndividualControlFormatting.true...IndividualControlFormatting />
+    <IntuitiveSorting />
+    <IntuitiveSorting_SP2 />
+    <MarkAnimation />
+    <ObjectModelEncapsulateLegacy />
+    <ObjectModelExtractV2 />
+    <ObjectModelTableType />
+    <SchemaViewerObjectModel />
+    <SetMembershipControl />
+    <SheetIdentifierTracking />
+    <_.fcp.VConnDownstreamExtractsWithWarnings.true...VConnDownstreamExtractsWithWarnings />
+    <WindowsPersistSimpleIdentifiers />
+    <WorksheetBackgroundTransparency />
+  </document-format-change-manifest>
+  <repository-location id='Automotive-Operations-Analysis_17617872372150' path='/workbooks' revision='1.0' />
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='kia_fixed_operations_enhanced' inline='true' name='federated.0e6imby1xr9yf51cis1ay1qgs3gj' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='kia_fixed_operations_enhanced' name='textscan.1x1hchr1ckkyn01gkyij81egksmc'>
+            <connection class='textscan' directory='C:/Users/tobst/git-repos/KIA-operations-analysis' filename='kia_fixed_operations_enhanced.csv' password='' server='' workgroup-auth-mode='as-is' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.1x1hchr1ckkyn01gkyij81egksmc' name='kia_fixed_operations_enhanced.csv' table='[kia_fixed_operations_enhanced#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='string' name='dealer_id' ordinal='0' />
+            <column datatype='string' name='region' ordinal='1' />
+            <column datatype='date' name='month' ordinal='2' />
+            <column datatype='real' name='service_revenue' ordinal='3' />
+            <column datatype='real' name='parts_revenue' ordinal='4' />
+            <column datatype='real' name='repair_orders' ordinal='5' />
+            <column datatype='real' name='csi_score' ordinal='6' />
+            <column datatype='real' name='retention_rate' ordinal='7' />
+            <column datatype='real' name='avg_turnaround_days' ordinal='8' />
+            <column datatype='integer' name='warranty_claims' ordinal='9' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[kia_fixed_operations_enhanced.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>dealer_id</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[dealer_id]</local-name>
+            <parent-name>[kia_fixed_operations_enhanced.csv]</parent-name>
+            <remote-alias>dealer_id</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[kia_fixed_operations_enhanced.csv_0057845C6DE54EDDA6BB6AE6B443C2A9]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>region</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[region]</local-name>
+            <parent-name>[kia_fixed_operations_enhanced.csv]</parent-name>
+            <remote-alias>region</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[kia_fixed_operations_enhanced.csv_0057845C6DE54EDDA6BB6AE6B443C2A9]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>month</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[month]</local-name>
+            <parent-name>[kia_fixed_operations_enhanced.csv]</parent-name>
+            <remote-alias>month</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[kia_fixed_operations_enhanced.csv_0057845C6DE54EDDA6BB6AE6B443C2A9]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>service_revenue</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[service_revenue]</local-name>
+            <parent-name>[kia_fixed_operations_enhanced.csv]</parent-name>
+            <remote-alias>service_revenue</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[kia_fixed_operations_enhanced.csv_0057845C6DE54EDDA6BB6AE6B443C2A9]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>parts_revenue</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[parts_revenue]</local-name>
+            <parent-name>[kia_fixed_operations_enhanced.csv]</parent-name>
+            <remote-alias>parts_revenue</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[kia_fixed_operations_enhanced.csv_0057845C6DE54EDDA6BB6AE6B443C2A9]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>repair_orders</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[repair_orders]</local-name>
+            <parent-name>[kia_fixed_operations_enhanced.csv]</parent-name>
+            <remote-alias>repair_orders</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[kia_fixed_operations_enhanced.csv_0057845C6DE54EDDA6BB6AE6B443C2A9]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>csi_score</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[csi_score]</local-name>
+            <parent-name>[kia_fixed_operations_enhanced.csv]</parent-name>
+            <remote-alias>csi_score</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[kia_fixed_operations_enhanced.csv_0057845C6DE54EDDA6BB6AE6B443C2A9]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>retention_rate</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[retention_rate]</local-name>
+            <parent-name>[kia_fixed_operations_enhanced.csv]</parent-name>
+            <remote-alias>retention_rate</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[kia_fixed_operations_enhanced.csv_0057845C6DE54EDDA6BB6AE6B443C2A9]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>avg_turnaround_days</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[avg_turnaround_days]</local-name>
+            <parent-name>[kia_fixed_operations_enhanced.csv]</parent-name>
+            <remote-alias>avg_turnaround_days</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[kia_fixed_operations_enhanced.csv_0057845C6DE54EDDA6BB6AE6B443C2A9]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>warranty_claims</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[warranty_claims]</local-name>
+            <parent-name>[kia_fixed_operations_enhanced.csv]</parent-name>
+            <remote-alias>warranty_claims</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[kia_fixed_operations_enhanced.csv_0057845C6DE54EDDA6BB6AE6B443C2A9]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Dealer Avg Service Revenue' datatype='real' name='[Calculation_1439463031504302080]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='{ FIXED [dealer_id] : AVG([service_revenue]) }' />
+      </column>
+      <column caption='Overall Avg Service Revenue' datatype='real' name='[Calculation_1439463031504396289]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='{ FIXED : AVG([service_revenue]) }' />
+      </column>
+      <column caption='Dealer Avg CSI' datatype='real' name='[Calculation_1439463031504457730]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='{ FIXED [dealer_id] : AVG([csi_score]) }' />
+      </column>
+      <column caption='Dealer Avg Retention' datatype='real' name='[Calculation_1439463031504543747]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='{ FIXED [dealer_id] : AVG([retention_rate]) }' />
+      </column>
+      <column caption='TOPBOT5 ' datatype='string' name='[Calculation_1439463031513284614]' role='measure' type='nominal'>
+        <calculation class='tableau' formula='IF [Calculation_448671113302806530] &lt;= 5 THEN &quot;Top 5&quot;&#13;&#10;ELSEIF [Calculation_448671113302806530] &gt;= (SIZE()-4) THEN &quot;Bottom 5&quot;&#13;&#10;ELSE &quot;Middle&quot;&#13;&#10;END'>
+          <table-calc ordering-type='Rows' />
+        </calculation>
+      </column>
+      <column caption='Box' datatype='string' name='[Calculation_1439463031528960014]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='&quot;&quot;' />
+      </column>
+      <column caption='Composite KPI Score' datatype='real' name='[Calculation_448671113300914177]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='([Calculation_1439463031504457730] * 0.4)&#13;&#10;+ ( [Calculation_1439463031504302080] / [Calculation_1439463031504396289] * 100 * 0.3 )&#13;&#10;+ ( [Calculation_1439463031504543747] * 0.3 )' />
+      </column>
+      <column caption='Dealer Rank' datatype='integer' name='[Calculation_448671113302806530]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='RANK_DENSE(SUM([Calculation_448671113300914177]), &apos;desc&apos;)'>
+          <table-calc ordering-field='[federated.0e6imby1xr9yf51cis1ay1qgs3gj].[dealer_id]' ordering-type='Field' />
+        </calculation>
+      </column>
+      <column caption='kia_fixed_operations_enhanced.csv' datatype='table' name='[__tableau_internal_object_id__].[kia_fixed_operations_enhanced.csv_0057845C6DE54EDDA6BB6AE6B443C2A9]' role='measure' type='quantitative' />
+      <column caption='Avg Turnaround Days' datatype='real' name='[avg_turnaround_days]' role='measure' type='quantitative' />
+      <column caption='Csi Score' datatype='real' name='[csi_score]' role='measure' type='quantitative' />
+      <column caption='Dealer Id' datatype='string' name='[dealer_id]' role='dimension' type='nominal' />
+      <column caption='Month' datatype='date' name='[month]' role='dimension' type='ordinal' />
+      <column caption='Parts Revenue' datatype='real' name='[parts_revenue]' role='measure' type='quantitative' />
+      <column caption='Region' datatype='string' name='[region]' role='dimension' type='nominal' />
+      <column caption='Repair Orders' datatype='real' name='[repair_orders]' role='measure' type='quantitative' />
+      <column caption='Retention Rate' datatype='real' name='[retention_rate]' role='measure' type='quantitative' />
+      <column caption='Service Revenue' datatype='real' name='[service_revenue]' role='measure' type='quantitative' />
+      <column caption='Warranty Claims' datatype='integer' name='[warranty_claims]' role='measure' type='quantitative' />
+      <column-instance column='[Calculation_448671113300914177]' derivation='Avg' name='[avg:Calculation_448671113300914177:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[csi_score]' derivation='Avg' name='[avg:csi_score:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[service_revenue]' derivation='Avg' name='[avg:service_revenue:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[month]' derivation='Month' name='[mn:month:ok]' pivot='key' type='ordinal' />
+      <column-instance column='[csi_score]' derivation='None' name='[none:csi_score:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[region]' derivation='None' name='[none:region:nk]' pivot='key' type='nominal' />
+      <column-instance column='[service_revenue]' derivation='None' name='[none:service_revenue:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Calculation_448671113300914177]' derivation='Sum' name='[sum:Calculation_448671113300914177:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[parts_revenue]' derivation='Sum' name='[sum:parts_revenue:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[service_revenue]' derivation='Sum' name='[sum:service_revenue:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[warranty_claims]' derivation='Sum' name='[sum:warranty_claims:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Calculation_1439463031513284614]' derivation='User' name='[usr:Calculation_1439463031513284614:nk:2]' pivot='key' type='nominal'>
+        <table-calc ordering-type='Rows' />
+        <table-calc field='[federated.0e6imby1xr9yf51cis1ay1qgs3gj].[Calculation_448671113302806530]' ordering-field='[federated.0e6imby1xr9yf51cis1ay1qgs3gj].[dealer_id]' ordering-type='Field' />
+      </column-instance>
+      <column-instance column='[Calculation_1439463031513284614]' derivation='User' name='[usr:Calculation_1439463031513284614:nk:3]' pivot='key' type='nominal'>
+        <table-calc ordering-type='Columns' />
+        <table-calc field='[federated.0e6imby1xr9yf51cis1ay1qgs3gj].[Calculation_448671113302806530]' ordering-field='[federated.0e6imby1xr9yf51cis1ay1qgs3gj].[dealer_id]' ordering-type='Field' />
+      </column-instance>
+      <extract _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' object-id='' units='records'>
+        <connection access_mode='readonly' author-locale='en_US' class='hyper' dbname='Data/TableauTemp/#TableauTemp_12dvy7u0wtrgph1a7k2oq1uzcrwy.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='' username='tableau_internal_user'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>dealer_id</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[dealer_id]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>dealer_id</remote-alias>
+              <ordinal>0</ordinal>
+              <family>kia_fixed_operations_enhanced.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>50</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>region</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[region]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>region</remote-alias>
+              <ordinal>1</ordinal>
+              <family>kia_fixed_operations_enhanced.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>4</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>month</remote-name>
+              <remote-type>133</remote-type>
+              <local-name>[month]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>month</remote-alias>
+              <ordinal>2</ordinal>
+              <family>kia_fixed_operations_enhanced.csv</family>
+              <local-type>date</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>24</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>service_revenue</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[service_revenue]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>service_revenue</remote-alias>
+              <ordinal>3</ordinal>
+              <family>kia_fixed_operations_enhanced.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1200</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>parts_revenue</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[parts_revenue]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>parts_revenue</remote-alias>
+              <ordinal>4</ordinal>
+              <family>kia_fixed_operations_enhanced.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1200</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>repair_orders</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[repair_orders]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>repair_orders</remote-alias>
+              <ordinal>5</ordinal>
+              <family>kia_fixed_operations_enhanced.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1174</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>csi_score</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[csi_score]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>csi_score</remote-alias>
+              <ordinal>6</ordinal>
+              <family>kia_fixed_operations_enhanced.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>826</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>retention_rate</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[retention_rate]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>retention_rate</remote-alias>
+              <ordinal>7</ordinal>
+              <family>kia_fixed_operations_enhanced.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>52</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>avg_turnaround_days</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[avg_turnaround_days]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>avg_turnaround_days</remote-alias>
+              <ordinal>8</ordinal>
+              <family>kia_fixed_operations_enhanced.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>250</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>warranty_claims</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[warranty_claims]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>warranty_claims</remote-alias>
+              <ordinal>9</ordinal>
+              <family>kia_fixed_operations_enhanced.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>35</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[mn:month:ok]' type='palette'>
+            <map to='#499894'>
+              <bucket>7</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>2023</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>3</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>11</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>8</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>4</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>1</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>5</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>12</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>9</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>6</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>2024</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>10</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>2</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[usr:Calculation_1439463031513284614:nk:3]' type='palette'>
+            <map to='#81537f'>
+              <bucket>&quot;Top 5&quot;</bucket>
+            </map>
+            <map to='#cf9dbe'>
+              <bucket>&quot;Bottom 5&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[none:region:nk]' type='palette'>
+            <map to='#926591'>
+              <bucket>&quot;Midwest&quot;</bucket>
+            </map>
+            <map to='#b27ba1'>
+              <bucket>&quot;Northeast&quot;</bucket>
+            </map>
+            <map to='#ca96b8'>
+              <bucket>&quot;South&quot;</bucket>
+            </map>
+            <map to='#e0b2d2'>
+              <bucket>&quot;West&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[:Measure Names]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.0e6imby1xr9yf51cis1ay1qgs3gj].[none:csi_score:qk]&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;[federated.0e6imby1xr9yf51cis1ay1qgs3gj].[sum:Calculation_1439463031535587344:qk]&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;[federated.0e6imby1xr9yf51cis1ay1qgs3gj].[avg:csi_score:qk]&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;[federated.0e6imby1xr9yf51cis1ay1qgs3gj].[sum:service_revenue:qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.0e6imby1xr9yf51cis1ay1qgs3gj].[avg:Calculation_448671113300914177:qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.0e6imby1xr9yf51cis1ay1qgs3gj].[avg:service_revenue:qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.0e6imby1xr9yf51cis1ay1qgs3gj].[none:service_revenue:qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.0e6imby1xr9yf51cis1ay1qgs3gj].[sum:Calculation_448671113300914177:qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.0e6imby1xr9yf51cis1ay1qgs3gj].[sum:warranty_claims:qk]&quot;</bucket>
+            </map>
+            <map to='#ff9da7'>
+              <bucket>&quot;[federated.0e6imby1xr9yf51cis1ay1qgs3gj].[sum:parts_revenue:qk]&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[usr:Calculation_1439463031513284614:nk:2]' type='palette'>
+            <map to='#81537f'>
+              <bucket>&quot;Top 5&quot;</bucket>
+            </map>
+            <map to='#cf9dbe'>
+              <bucket>&quot;Bottom 5&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <object-graph>
+        <objects>
+          <object caption='kia_fixed_operations_enhanced.csv' id='kia_fixed_operations_enhanced.csv_0057845C6DE54EDDA6BB6AE6B443C2A9'>
+            <properties context=''>
+              <relation connection='textscan.1x1hchr1ckkyn01gkyij81egksmc' name='kia_fixed_operations_enhanced.csv' table='[kia_fixed_operations_enhanced#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                  <column datatype='string' name='dealer_id' ordinal='0' />
+                  <column datatype='string' name='region' ordinal='1' />
+                  <column datatype='date' name='month' ordinal='2' />
+                  <column datatype='real' name='service_revenue' ordinal='3' />
+                  <column datatype='real' name='parts_revenue' ordinal='4' />
+                  <column datatype='real' name='repair_orders' ordinal='5' />
+                  <column datatype='real' name='csi_score' ordinal='6' />
+                  <column datatype='real' name='retention_rate' ordinal='7' />
+                  <column datatype='real' name='avg_turnaround_days' ordinal='8' />
+                  <column datatype='integer' name='warranty_claims' ordinal='9' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Box'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='kia_fixed_operations_enhanced' name='federated.0e6imby1xr9yf51cis1ay1qgs3gj' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0e6imby1xr9yf51cis1ay1qgs3gj'>
+            <column caption='Box' datatype='string' name='[Calculation_1439463031528960014]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='&quot;&quot;' />
+            </column>
+            <column-instance column='[Calculation_1439463031528960014]' derivation='None' name='[none:Calculation_1439463031528960014:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='table'>
+            <format attr='background-color' value='#00000000' />
+          </style-rule>
+          <style-rule element='annotation'>
+            <format attr='fill-color' id='annotation_0' value='#ffffff67' />
+            <format attr='rounding' id='annotation_0' value='small' />
+            <format attr='fill-color' id='annotation_1' value='#ffffff67' />
+            <format attr='rounding' id='annotation_1' value='small' />
+            <format attr='fill-color' id='annotation_2' value='#ffffff67' />
+            <format attr='rounding' id='annotation_2' value='small' />
+            <format attr='fill-color' id='annotation_3' value='#ffffff67' />
+            <format attr='rounding' id='annotation_3' value='small' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.0e6imby1xr9yf51cis1ay1qgs3gj].[none:Calculation_1439463031528960014:nk]' />
+            </encodings>
+            <customized-tooltip>
+              <formatted-text />
+            </customized-tooltip>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+        <annotations>
+          <annotation class='area' id='0' text-pinx='0.5' text-piny='0.5' text-width-delta='-18'>
+            <formatted-text />
+            <top-left>
+              <visual-coordinate class='axis'>
+                <x-coord cell-offset='0.010981'>
+                  <node-reference />
+                </x-coord>
+                <y-coord cell-offset='0.0208333'>
+                  <node-reference />
+                </y-coord>
+                <page-reference />
+              </visual-coordinate>
+            </top-left>
+            <bottom-right>
+              <visual-coordinate class='axis'>
+                <x-coord cell-offset='0.989751'>
+                  <node-reference />
+                </x-coord>
+                <y-coord cell-offset='0.977865'>
+                  <node-reference />
+                </y-coord>
+                <page-reference />
+              </visual-coordinate>
+            </bottom-right>
+            <text x='0.5' y='0.5' />
+          </annotation>
+          <annotation class='area' id='1' text-pinx='0.5' text-piny='0.5' text-width-delta='-18'>
+            <formatted-text />
+            <top-left>
+              <visual-coordinate class='axis'>
+                <x-coord cell-offset='0.022694'>
+                  <node-reference />
+                </x-coord>
+                <y-coord cell-offset='0.0898438'>
+                  <node-reference />
+                </y-coord>
+                <page-reference />
+              </visual-coordinate>
+            </top-left>
+            <bottom-right>
+              <visual-coordinate class='axis'>
+                <x-coord cell-offset='0.316252'>
+                  <node-reference />
+                </x-coord>
+                <y-coord cell-offset='0.959635'>
+                  <node-reference />
+                </y-coord>
+                <page-reference />
+              </visual-coordinate>
+            </bottom-right>
+            <text x='0.5' y='0.5' />
+          </annotation>
+          <annotation class='area' id='2' text-pinx='0.5' text-piny='0.5' text-width-delta='-18'>
+            <formatted-text />
+            <top-left>
+              <visual-coordinate class='axis'>
+                <x-coord cell-offset='0.330893'>
+                  <node-reference />
+                </x-coord>
+                <y-coord cell-offset='0.0898438'>
+                  <node-reference />
+                </y-coord>
+                <page-reference />
+              </visual-coordinate>
+            </top-left>
+            <bottom-right>
+              <visual-coordinate class='axis'>
+                <x-coord cell-offset='0.974378'>
+                  <node-reference />
+                </x-coord>
+                <y-coord cell-offset='0.454427'>
+                  <node-reference />
+                </y-coord>
+                <page-reference />
+              </visual-coordinate>
+            </bottom-right>
+            <text x='0.5' y='0.5' />
+          </annotation>
+          <annotation class='area' id='3' text-pinx='0.5' text-piny='0.5' text-width-delta='-18'>
+            <formatted-text />
+            <top-left>
+              <visual-coordinate class='axis'>
+                <x-coord cell-offset='0.330893'>
+                  <node-reference />
+                </x-coord>
+                <y-coord cell-offset='0.535156'>
+                  <node-reference />
+                </y-coord>
+                <page-reference />
+              </visual-coordinate>
+            </top-left>
+            <bottom-right>
+              <visual-coordinate class='axis'>
+                <x-coord cell-offset='0.972182'>
+                  <node-reference />
+                </x-coord>
+                <y-coord cell-offset='0.959635'>
+                  <node-reference />
+                </y-coord>
+                <page-reference />
+              </visual-coordinate>
+            </bottom-right>
+            <text x='0.5' y='0.5' />
+          </annotation>
+        </annotations>
+      </table>
+      <simple-id uuid='{B21B41C3-B740-4DAB-86A4-010703597CC5}' />
+    </worksheet>
+    <worksheet name='CSI PartRev Over Time'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='kia_fixed_operations_enhanced' name='federated.0e6imby1xr9yf51cis1ay1qgs3gj' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0e6imby1xr9yf51cis1ay1qgs3gj'>
+            <column-instance column='[csi_score]' derivation='Avg' name='[avg:csi_score:qk]' pivot='key' type='quantitative' />
+            <column caption='Csi Score' datatype='real' name='[csi_score]' role='measure' type='quantitative' />
+            <column-instance column='[month]' derivation='Month' name='[mn:month:qk]' pivot='key' type='quantitative' />
+            <column caption='Month' datatype='date' name='[month]' role='dimension' type='ordinal' />
+            <column-instance column='[region]' derivation='None' name='[none:region:nk]' pivot='key' type='nominal' />
+            <column caption='Parts Revenue' datatype='real' name='[parts_revenue]' role='measure' type='quantitative' />
+            <column caption='Region' datatype='string' name='[region]' role='dimension' type='nominal' />
+            <column-instance column='[parts_revenue]' derivation='Sum' name='[sum:parts_revenue:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0e6imby1xr9yf51cis1ay1qgs3gj].[:Measure Names]'>
+            <groupfilter function='level-members' level='[:Measure Names]' />
+          </filter>
+          <filter class='categorical' column='[federated.0e6imby1xr9yf51cis1ay1qgs3gj].[none:region:nk]'>
+            <groupfilter function='level-members' level='[none:region:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='quantitative' column='[federated.0e6imby1xr9yf51cis1ay1qgs3gj].[sum:parts_revenue:qk]' included-values='in-range' />
+          <slices>
+            <column>[federated.0e6imby1xr9yf51cis1ay1qgs3gj].[none:region:nk]</column>
+            <column>[federated.0e6imby1xr9yf51cis1ay1qgs3gj].[sum:parts_revenue:qk]</column>
+            <column>[federated.0e6imby1xr9yf51cis1ay1qgs3gj].[:Measure Names]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.0e6imby1xr9yf51cis1ay1qgs3gj].[sum:parts_revenue:qk]' field-type='quantitative' fold='true' max='11000000.0' min='5000000.0' range-type='fixed' scope='rows' type='space' />
+            <encoding attr='space' class='0' field='[federated.0e6imby1xr9yf51cis1ay1qgs3gj].[avg:csi_score:qk]' field-type='quantitative' max='90.0' min='80.0' range-type='fixed' scope='rows' type='space' />
+            <encoding attr='space' class='0' field='[federated.0e6imby1xr9yf51cis1ay1qgs3gj].[mn:month:qk]' field-type='quantitative' max='12' min='1' range-type='fixed' scope='cols' type='space' />
+            <format attr='title' class='0' field='[federated.0e6imby1xr9yf51cis1ay1qgs3gj].[mn:month:qk]' scope='cols' value='Month' />
+            <format attr='title' class='0' field='[federated.0e6imby1xr9yf51cis1ay1qgs3gj].[sum:parts_revenue:qk]' scope='rows' value='' />
+            <format attr='title' class='0' field='[federated.0e6imby1xr9yf51cis1ay1qgs3gj].[avg:csi_score:qk]' scope='rows' value='' />
+            <format attr='tick-color' value='#00000000' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='font-weight' field='[federated.0e6imby1xr9yf51cis1ay1qgs3gj].[avg:csi_score:qk]' value='bold' />
+            <format attr='color' field='[federated.0e6imby1xr9yf51cis1ay1qgs3gj].[avg:csi_score:qk]' value='#000000' />
+            <format attr='font-weight' field='[federated.0e6imby1xr9yf51cis1ay1qgs3gj].[sum:parts_revenue:qk]' value='bold' />
+            <format attr='color' field='[federated.0e6imby1xr9yf51cis1ay1qgs3gj].[sum:parts_revenue:qk]' value='#000000' />
+            <format attr='font-weight' field='[federated.0e6imby1xr9yf51cis1ay1qgs3gj].[mn:month:qk]' value='bold' />
+            <format attr='color' field='[federated.0e6imby1xr9yf51cis1ay1qgs3gj].[mn:month:qk]' value='#000000' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='border-width' data-class='total' value='0' />
+            <format attr='border-style' data-class='total' value='none' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='font-weight' field='[federated.0e6imby1xr9yf51cis1ay1qgs3gj].[avg:csi_score:qk]' value='bold' />
+            <format attr='color' field='[federated.0e6imby1xr9yf51cis1ay1qgs3gj].[avg:csi_score:qk]' value='#000000' />
+            <format attr='font-weight' field='[federated.0e6imby1xr9yf51cis1ay1qgs3gj].[sum:parts_revenue:qk]' value='bold' />
+            <format attr='color' field='[federated.0e6imby1xr9yf51cis1ay1qgs3gj].[sum:parts_revenue:qk]' value='#000000' />
+            <format attr='font-weight' field='[federated.0e6imby1xr9yf51cis1ay1qgs3gj].[mn:month:qk]' value='bold' />
+            <format attr='color' field='[federated.0e6imby1xr9yf51cis1ay1qgs3gj].[mn:month:qk]' value='#000000' />
+            <format attr='text-format' field='[federated.0e6imby1xr9yf51cis1ay1qgs3gj].[sum:parts_revenue:qk]' value='n&quot;$&quot;#,##0,,M;-&quot;$&quot;#,##0,,M' />
+            <format attr='text-format' field='[federated.0e6imby1xr9yf51cis1ay1qgs3gj].[avg:csi_score:qk]' value='n#,##0&quot;%&quot;;-#,##0&quot;%&quot;' />
+          </style-rule>
+          <style-rule element='pane'>
+            <format attr='border-width' data-class='total' value='0' />
+            <format attr='border-style' data-class='total' value='none' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#00000000' />
+          </style-rule>
+          <style-rule element='dropline'>
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+          <style-rule element='refline'>
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+          <style-rule element='gridline'>
+            <format attr='stroke-size' scope='rows' value='0' />
+            <format attr='line-visibility' scope='rows' value='off' />
+          </style-rule>
+          <style-rule element='zeroline'>
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+          <style-rule element='table-div'>
+            <format attr='stroke-size' scope='rows' value='0' />
+            <format attr='line-visibility' scope='rows' value='off' />
+            <format attr='stroke-size' scope='cols' value='0' />
+            <format attr='line-visibility' scope='cols' value='off' />
+          </style-rule>
+          <style-rule element='legend'>
+            <format attr='font-weight' value='bold' />
+            <format attr='color' value='#333333' />
+          </style-rule>
+          <style-rule element='legend-title'>
+            <_.fcp.IndividualControlFormatting.true...format attr='text-align' field='[federated.0e6imby1xr9yf51cis1ay1qgs3gj].[:Measure Names]' id='legend-color' value='left' />
+            <format attr='color' value='#000000' />
+            <format attr='font-weight' value='normal' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0e6imby1xr9yf51cis1ay1qgs3gj].[:Measure Names]' />
+            </encodings>
+          </pane>
+          <pane id='1' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.0e6imby1xr9yf51cis1ay1qgs3gj].[avg:csi_score:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0e6imby1xr9yf51cis1ay1qgs3gj].[:Measure Names]' />
+            </encodings>
+          </pane>
+          <pane id='2' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.0e6imby1xr9yf51cis1ay1qgs3gj].[sum:parts_revenue:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0e6imby1xr9yf51cis1ay1qgs3gj].[:Measure Names]' />
+            </encodings>
+            <style>
+              <style-rule element='trendline'>
+                <format attr='stroke-size' value='0' />
+                <format attr='line-visibility' value='off' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>([federated.0e6imby1xr9yf51cis1ay1qgs3gj].[avg:csi_score:qk] + [federated.0e6imby1xr9yf51cis1ay1qgs3gj].[sum:parts_revenue:qk])</rows>
+        <cols>[federated.0e6imby1xr9yf51cis1ay1qgs3gj].[mn:month:qk]</cols>
+      </table>
+      <simple-id uuid='{77D815C5-4BDA-4773-A2A4-D4768CAE4F97}' />
+    </worksheet>
+    <worksheet name='CSI ServRev Scat'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='kia_fixed_operations_enhanced' name='federated.0e6imby1xr9yf51cis1ay1qgs3gj' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0e6imby1xr9yf51cis1ay1qgs3gj'>
+            <column caption='Csi Score' datatype='real' name='[csi_score]' role='measure' type='quantitative' />
+            <column-instance column='[csi_score]' derivation='None' name='[none:csi_score:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[region]' derivation='None' name='[none:region:nk]' pivot='key' type='nominal' />
+            <column-instance column='[service_revenue]' derivation='None' name='[none:service_revenue:qk]' pivot='key' type='quantitative' />
+            <column caption='Region' datatype='string' name='[region]' role='dimension' type='nominal' />
+            <column caption='Service Revenue' datatype='real' name='[service_revenue]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[federated.0e6imby1xr9yf51cis1ay1qgs3gj].[none:service_revenue:qk]' scope='rows' value='' />
+            <format attr='title' class='0' field='[federated.0e6imby1xr9yf51cis1ay1qgs3gj].[none:csi_score:qk]' scope='cols' value='' />
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+            <format attr='tick-color' value='#00000000' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='border-width' data-class='total' value='0' />
+            <format attr='border-style' data-class='total' value='none' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='font-weight' field='[federated.0e6imby1xr9yf51cis1ay1qgs3gj].[none:service_revenue:qk]' value='bold' />
+            <format attr='color' field='[federated.0e6imby1xr9yf51cis1ay1qgs3gj].[none:service_revenue:qk]' value='#000000' />
+            <format attr='font-weight' field='[federated.0e6imby1xr9yf51cis1ay1qgs3gj].[none:csi_score:qk]' value='bold' />
+            <format attr='color' field='[federated.0e6imby1xr9yf51cis1ay1qgs3gj].[none:csi_score:qk]' value='#000000' />
+            <format attr='text-format' field='[federated.0e6imby1xr9yf51cis1ay1qgs3gj].[none:service_revenue:qk]' value='c&quot;$&quot;#,##0,K;-&quot;$&quot;#,##0,K' />
+            <format attr='text-format' field='[federated.0e6imby1xr9yf51cis1ay1qgs3gj].[none:csi_score:qk]' value='n#,##0;-#,##0' />
+          </style-rule>
+          <style-rule element='pane'>
+            <format attr='border-width' data-class='total' value='0' />
+            <format attr='border-style' data-class='total' value='none' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#00000000' />
+          </style-rule>
+          <style-rule element='dropline'>
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+          <style-rule element='refline'>
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+          <style-rule element='gridline'>
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+          <style-rule element='zeroline'>
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+          <style-rule element='legend'>
+            <format attr='font-weight' value='bold' />
+          </style-rule>
+          <style-rule element='legend-title'>
+            <format attr='font-weight' value='bold' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <color column='[federated.0e6imby1xr9yf51cis1ay1qgs3gj].[none:region:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='shape' value=':filled/circle' />
+                <format attr='size' value='0.77961325645446777' />
+              </style-rule>
+              <style-rule element='trendline'>
+                <format attr='stroke-size' value='0' />
+                <format attr='line-visibility' value='off' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0e6imby1xr9yf51cis1ay1qgs3gj].[none:service_revenue:qk]</rows>
+        <cols>[federated.0e6imby1xr9yf51cis1ay1qgs3gj].[none:csi_score:qk]</cols>
+      </table>
+      <simple-id uuid='{58DCA0A7-3EF7-4093-9125-F28AD2697185}' />
+    </worksheet>
+    <worksheet name='CSI by Region'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='kia_fixed_operations_enhanced' name='federated.0e6imby1xr9yf51cis1ay1qgs3gj' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0e6imby1xr9yf51cis1ay1qgs3gj'>
+            <column-instance column='[csi_score]' derivation='Avg' name='[avg:csi_score:qk]' pivot='key' type='quantitative' />
+            <column caption='Csi Score' datatype='real' name='[csi_score]' role='measure' type='quantitative' />
+            <column-instance column='[region]' derivation='None' name='[none:region:nk]' pivot='key' type='nominal' />
+            <column caption='Region' datatype='string' name='[region]' role='dimension' type='nominal' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[federated.0e6imby1xr9yf51cis1ay1qgs3gj].[avg:csi_score:qk]' scope='cols' value='' />
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+            <format attr='tick-color' value='#00000000' />
+            <encoding attr='space' class='0' field='[federated.0e6imby1xr9yf51cis1ay1qgs3gj].[avg:csi_score:qk]' field-type='quantitative' max='100.0' min='10.0' range-type='fixed' scope='cols' type='space' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='border-width' data-class='total' value='0' />
+            <format attr='border-style' data-class='total' value='none' />
+          </style-rule>
+          <style-rule element='field-labels-decoration'>
+            <format attr='font-style' value='normal' />
+            <format attr='font-weight' value='normal' />
+            <format attr='text-orientation' value='-90' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='font-weight' field='[federated.0e6imby1xr9yf51cis1ay1qgs3gj].[avg:csi_score:qk]' value='bold' />
+            <format attr='color' field='[federated.0e6imby1xr9yf51cis1ay1qgs3gj].[avg:csi_score:qk]' value='#000000' />
+            <format attr='font-weight' field='[federated.0e6imby1xr9yf51cis1ay1qgs3gj].[none:region:nk]' value='bold' />
+            <format attr='color' field='[federated.0e6imby1xr9yf51cis1ay1qgs3gj].[none:region:nk]' value='#000000' />
+          </style-rule>
+          <style-rule element='pane'>
+            <format attr='border-width' data-class='total' value='0' />
+            <format attr='border-style' data-class='total' value='none' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#00000000' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='rows' value='false' />
+          </style-rule>
+          <style-rule element='dropline'>
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+          <style-rule element='refline'>
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+          <style-rule element='gridline'>
+            <format attr='stroke-size' scope='cols' value='0' />
+            <format attr='line-visibility' scope='cols' value='off' />
+          </style-rule>
+          <style-rule element='zeroline'>
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-color' value='#b07aa1' />
+              </style-rule>
+              <style-rule element='trendline'>
+                <format attr='stroke-size' value='0' />
+                <format attr='line-visibility' value='off' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0e6imby1xr9yf51cis1ay1qgs3gj].[none:region:nk]</rows>
+        <cols>[federated.0e6imby1xr9yf51cis1ay1qgs3gj].[avg:csi_score:qk]</cols>
+      </table>
+      <simple-id uuid='{026232CB-AAA3-4651-B1B8-5936AA616E91}' />
+    </worksheet>
+    <worksheet name='Region Warranty Heatmap'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='kia_fixed_operations_enhanced' name='federated.0e6imby1xr9yf51cis1ay1qgs3gj' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0e6imby1xr9yf51cis1ay1qgs3gj'>
+            <column caption='Month' datatype='date' name='[month]' role='dimension' type='ordinal' />
+            <column-instance column='[region]' derivation='None' name='[none:region:nk]' pivot='key' type='nominal' />
+            <column-instance column='[month]' derivation='Quarter' name='[qr:month:ok]' pivot='key' type='ordinal' />
+            <column caption='Region' datatype='string' name='[region]' role='dimension' type='nominal' />
+            <column-instance column='[warranty_claims]' derivation='Sum' name='[sum:warranty_claims:qk]' pivot='key' type='quantitative' />
+            <column caption='Warranty Claims' datatype='integer' name='[warranty_claims]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='tick-color' scope='cols' value='#00000000' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='border-width' data-class='subtotal' scope='rows' value='0' />
+            <format attr='border-style' data-class='subtotal' scope='rows' value='none' />
+            <format attr='border-width' data-class='subtotal' scope='cols' value='0' />
+            <format attr='border-style' data-class='subtotal' scope='cols' value='none' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='color' field='[federated.0e6imby1xr9yf51cis1ay1qgs3gj].[none:region:nk]' value='#000000' />
+            <format attr='font-weight' field='[federated.0e6imby1xr9yf51cis1ay1qgs3gj].[none:region:nk]' value='bold' />
+            <format attr='font-weight' field='[federated.0e6imby1xr9yf51cis1ay1qgs3gj].[qr:month:ok]' value='bold' />
+            <format attr='color' field='[federated.0e6imby1xr9yf51cis1ay1qgs3gj].[qr:month:ok]' value='#000000' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.0e6imby1xr9yf51cis1ay1qgs3gj].[sum:warranty_claims:qk]' palette='purple_10_0' type='interpolated' />
+          </style-rule>
+          <style-rule element='pane'>
+            <format attr='border-width' data-class='subtotal' scope='rows' value='0' />
+            <format attr='border-style' data-class='subtotal' scope='rows' value='none' />
+            <format attr='border-width' data-class='subtotal' scope='cols' value='0' />
+            <format attr='border-style' data-class='subtotal' scope='cols' value='none' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#00000000' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='cols' value='false' />
+            <format attr='display-field-labels' scope='rows' value='false' />
+          </style-rule>
+          <style-rule element='dropline'>
+            <format attr='stroke-size' scope='cols' value='0' />
+            <format attr='line-visibility' scope='cols' value='off' />
+          </style-rule>
+          <style-rule element='refline'>
+            <format attr='stroke-size' scope='cols' value='0' />
+            <format attr='line-visibility' scope='cols' value='off' />
+          </style-rule>
+          <style-rule element='zeroline'>
+            <format attr='stroke-size' scope='cols' value='0' />
+            <format attr='line-visibility' scope='cols' value='off' />
+          </style-rule>
+          <style-rule element='table-div'>
+            <format attr='stroke-size' scope='rows' value='0' />
+            <format attr='line-visibility' scope='rows' value='off' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0e6imby1xr9yf51cis1ay1qgs3gj].[sum:warranty_claims:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='false' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0e6imby1xr9yf51cis1ay1qgs3gj].[none:region:nk]</rows>
+        <cols>[federated.0e6imby1xr9yf51cis1ay1qgs3gj].[qr:month:ok]</cols>
+      </table>
+      <simple-id uuid='{0613E4DF-02EC-4C87-AB50-FA6ED9FF251C}' />
+    </worksheet>
+    <worksheet name='Retention by Region'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='kia_fixed_operations_enhanced' name='federated.0e6imby1xr9yf51cis1ay1qgs3gj' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0e6imby1xr9yf51cis1ay1qgs3gj'>
+            <column-instance column='[retention_rate]' derivation='Avg' name='[avg:retention_rate:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[region]' derivation='None' name='[none:region:nk]' pivot='key' type='nominal' />
+            <column caption='Region' datatype='string' name='[region]' role='dimension' type='nominal' />
+            <column caption='Retention Rate' datatype='real' name='[retention_rate]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[federated.0e6imby1xr9yf51cis1ay1qgs3gj].[avg:retention_rate:qk]' scope='cols' value='' />
+            <format attr='stroke-size' scope='rows' value='0' />
+            <format attr='line-visibility' scope='rows' value='off' />
+            <format attr='tick-color' scope='rows' value='#00000000' />
+            <format attr='stroke-size' scope='cols' value='0' />
+            <format attr='line-visibility' scope='cols' value='off' />
+            <format attr='tick-color' scope='cols' value='#00000000' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='border-width' data-class='total' value='0' />
+            <format attr='border-style' data-class='total' value='none' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='font-weight' field='[federated.0e6imby1xr9yf51cis1ay1qgs3gj].[none:region:nk]' value='bold' />
+            <format attr='color' field='[federated.0e6imby1xr9yf51cis1ay1qgs3gj].[none:region:nk]' value='#000000' />
+            <format attr='font-weight' field='[federated.0e6imby1xr9yf51cis1ay1qgs3gj].[avg:retention_rate:qk]' value='bold' />
+            <format attr='color' field='[federated.0e6imby1xr9yf51cis1ay1qgs3gj].[avg:retention_rate:qk]' value='#000000' />
+            <format attr='text-format' field='[federated.0e6imby1xr9yf51cis1ay1qgs3gj].[avg:retention_rate:qk]' value='p0%' />
+          </style-rule>
+          <style-rule element='pane'>
+            <format attr='border-width' data-class='total' value='0' />
+            <format attr='border-style' data-class='total' value='none' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#00000000' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='rows' value='false' />
+          </style-rule>
+          <style-rule element='dropline'>
+            <format attr='stroke-size' scope='rows' value='0' />
+            <format attr='line-visibility' scope='rows' value='off' />
+            <format attr='stroke-size' scope='cols' value='0' />
+            <format attr='line-visibility' scope='cols' value='off' />
+          </style-rule>
+          <style-rule element='refline'>
+            <format attr='stroke-size' scope='rows' value='0' />
+            <format attr='line-visibility' scope='rows' value='off' />
+            <format attr='stroke-size' scope='cols' value='0' />
+            <format attr='line-visibility' scope='cols' value='off' />
+          </style-rule>
+          <style-rule element='gridline'>
+            <format attr='stroke-size' scope='cols' value='0' />
+            <format attr='line-visibility' scope='cols' value='off' />
+          </style-rule>
+          <style-rule element='zeroline'>
+            <format attr='stroke-size' scope='rows' value='0' />
+            <format attr='line-visibility' scope='rows' value='off' />
+            <format attr='stroke-size' scope='cols' value='0' />
+            <format attr='line-visibility' scope='cols' value='off' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-color' value='#c290b4' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0e6imby1xr9yf51cis1ay1qgs3gj].[none:region:nk]</rows>
+        <cols>[federated.0e6imby1xr9yf51cis1ay1qgs3gj].[avg:retention_rate:qk]</cols>
+      </table>
+      <simple-id uuid='{D6F09603-9AD3-453A-A49D-80EA8174DED0}' />
+    </worksheet>
+    <worksheet name='ServRev and Turnaround'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='kia_fixed_operations_enhanced' name='federated.0e6imby1xr9yf51cis1ay1qgs3gj' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0e6imby1xr9yf51cis1ay1qgs3gj'>
+            <column caption='Avg Turnaround Days' datatype='real' name='[avg_turnaround_days]' role='measure' type='quantitative' />
+            <column caption='Month' datatype='date' name='[month]' role='dimension' type='ordinal' />
+            <column-instance column='[avg_turnaround_days]' derivation='None' name='[none:avg_turnaround_days:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[service_revenue]' derivation='None' name='[none:service_revenue:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[month]' derivation='Quarter' name='[qr:month:ok]' pivot='key' type='ordinal' />
+            <column caption='Service Revenue' datatype='real' name='[service_revenue]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0e6imby1xr9yf51cis1ay1qgs3gj].[qr:month:ok]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.0e6imby1xr9yf51cis1ay1qgs3gj].[none:avg_turnaround_days:qk]</rows>
+        <cols>[federated.0e6imby1xr9yf51cis1ay1qgs3gj].[none:service_revenue:qk]</cols>
+      </table>
+      <simple-id uuid='{E26BAEAA-EBA8-4EB2-ADD8-B10BB9C67424}' />
+    </worksheet>
+    <worksheet name='ServRev by Region'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='kia_fixed_operations_enhanced' name='federated.0e6imby1xr9yf51cis1ay1qgs3gj' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0e6imby1xr9yf51cis1ay1qgs3gj'>
+            <column-instance column='[service_revenue]' derivation='Avg' name='[avg:service_revenue:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[region]' derivation='None' name='[none:region:nk]' pivot='key' type='nominal' />
+            <column caption='Region' datatype='string' name='[region]' role='dimension' type='nominal' />
+            <column caption='Service Revenue' datatype='real' name='[service_revenue]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[federated.0e6imby1xr9yf51cis1ay1qgs3gj].[avg:service_revenue:qk]' scope='cols' value='' />
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+            <format attr='tick-color' value='#00000000' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='border-width' data-class='total' value='0' />
+            <format attr='border-style' data-class='total' value='none' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='font-weight' field='[federated.0e6imby1xr9yf51cis1ay1qgs3gj].[none:region:nk]' value='bold' />
+            <format attr='color' field='[federated.0e6imby1xr9yf51cis1ay1qgs3gj].[none:region:nk]' value='#000000' />
+            <format attr='font-weight' field='[federated.0e6imby1xr9yf51cis1ay1qgs3gj].[avg:service_revenue:qk]' value='bold' />
+            <format attr='color' field='[federated.0e6imby1xr9yf51cis1ay1qgs3gj].[avg:service_revenue:qk]' value='#000000' />
+            <format attr='text-format' field='[federated.0e6imby1xr9yf51cis1ay1qgs3gj].[avg:service_revenue:qk]' value='n&quot;$&quot;#,##0,K;-&quot;$&quot;#,##0,K' />
+          </style-rule>
+          <style-rule element='pane'>
+            <format attr='border-width' data-class='total' value='0' />
+            <format attr='border-style' data-class='total' value='none' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#00000000' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='rows' value='false' />
+          </style-rule>
+          <style-rule element='dropline'>
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+          <style-rule element='refline'>
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+          <style-rule element='gridline'>
+            <format attr='stroke-size' scope='cols' value='0' />
+            <format attr='line-visibility' scope='cols' value='off' />
+          </style-rule>
+          <style-rule element='zeroline'>
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-color' value='#d4a6c8' />
+              </style-rule>
+              <style-rule element='trendline'>
+                <format attr='stroke-size' value='0' />
+                <format attr='line-visibility' value='off' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0e6imby1xr9yf51cis1ay1qgs3gj].[none:region:nk]</rows>
+        <cols>[federated.0e6imby1xr9yf51cis1ay1qgs3gj].[avg:service_revenue:qk]</cols>
+      </table>
+      <simple-id uuid='{19619764-39E9-4EB9-80A1-278D125A6D5F}' />
+    </worksheet>
+    <worksheet name='TOPBOT Dealerships'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='kia_fixed_operations_enhanced' name='federated.0e6imby1xr9yf51cis1ay1qgs3gj' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0e6imby1xr9yf51cis1ay1qgs3gj'>
+            <column caption='Dealer Avg Service Revenue' datatype='real' name='[Calculation_1439463031504302080]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='{ FIXED [dealer_id] : AVG([service_revenue]) }' />
+            </column>
+            <column caption='Overall Avg Service Revenue' datatype='real' name='[Calculation_1439463031504396289]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='{ FIXED : AVG([service_revenue]) }' />
+            </column>
+            <column caption='Dealer Avg CSI' datatype='real' name='[Calculation_1439463031504457730]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='{ FIXED [dealer_id] : AVG([csi_score]) }' />
+            </column>
+            <column caption='Dealer Avg Retention' datatype='real' name='[Calculation_1439463031504543747]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='{ FIXED [dealer_id] : AVG([retention_rate]) }' />
+            </column>
+            <column caption='TOPBOT5 ' datatype='string' name='[Calculation_1439463031513284614]' role='measure' type='nominal'>
+              <calculation class='tableau' formula='IF [Calculation_448671113302806530] &lt;= 5 THEN &quot;Top 5&quot;&#13;&#10;ELSEIF [Calculation_448671113302806530] &gt;= (SIZE()-4) THEN &quot;Bottom 5&quot;&#13;&#10;ELSE &quot;Middle&quot;&#13;&#10;END'>
+                <table-calc ordering-type='Rows' />
+              </calculation>
+            </column>
+            <column caption='Composite KPI Score' datatype='real' name='[Calculation_448671113300914177]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='([Calculation_1439463031504457730] * 0.4)&#13;&#10;+ ( [Calculation_1439463031504302080] / [Calculation_1439463031504396289] * 100 * 0.3 )&#13;&#10;+ ( [Calculation_1439463031504543747] * 0.3 )' />
+            </column>
+            <column caption='Dealer Rank' datatype='integer' name='[Calculation_448671113302806530]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='RANK_DENSE(SUM([Calculation_448671113300914177]), &apos;desc&apos;)'>
+                <table-calc ordering-field='[federated.0e6imby1xr9yf51cis1ay1qgs3gj].[dealer_id]' ordering-type='Field' />
+              </calculation>
+            </column>
+            <column caption='Csi Score' datatype='real' name='[csi_score]' role='measure' type='quantitative' />
+            <column caption='Dealer Id' datatype='string' name='[dealer_id]' role='dimension' type='nominal' />
+            <column-instance column='[dealer_id]' derivation='None' name='[none:dealer_id:nk]' pivot='key' type='nominal' />
+            <column caption='Retention Rate' datatype='real' name='[retention_rate]' role='measure' type='quantitative' />
+            <column caption='Service Revenue' datatype='real' name='[service_revenue]' role='measure' type='quantitative' />
+            <column-instance column='[Calculation_448671113300914177]' derivation='Sum' name='[sum:Calculation_448671113300914177:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_1439463031513284614]' derivation='User' name='[usr:Calculation_1439463031513284614:nk:2]' pivot='key' type='nominal'>
+              <table-calc ordering-type='Rows' />
+              <table-calc field='[federated.0e6imby1xr9yf51cis1ay1qgs3gj].[Calculation_448671113302806530]' ordering-field='[federated.0e6imby1xr9yf51cis1ay1qgs3gj].[dealer_id]' ordering-type='Field' />
+            </column-instance>
+            <column-instance column='[Calculation_448671113302806530]' derivation='User' name='[usr:Calculation_448671113302806530:qk:3]' pivot='key' type='quantitative'>
+              <table-calc ordering-field='[federated.0e6imby1xr9yf51cis1ay1qgs3gj].[dealer_id]' ordering-type='Field' />
+            </column-instance>
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0e6imby1xr9yf51cis1ay1qgs3gj].[usr:Calculation_1439463031513284614:nk:2]'>
+            <groupfilter function='union' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[usr:Calculation_1439463031513284614:nk:2]' member='&quot;Bottom 5&quot;' />
+              <groupfilter function='member' level='[usr:Calculation_1439463031513284614:nk:2]' member='&quot;Top 5&quot;' />
+            </groupfilter>
+          </filter>
+          <shelf-sorts>
+            <shelf-sort-v2 dimension-to-sort='[federated.0e6imby1xr9yf51cis1ay1qgs3gj].[none:dealer_id:nk]' direction='DESC' is-on-innermost-dimension='true' measure-to-sort-by='[federated.0e6imby1xr9yf51cis1ay1qgs3gj].[sum:Calculation_448671113300914177:qk]' shelf='columns' />
+          </shelf-sorts>
+          <slices>
+            <column>[federated.0e6imby1xr9yf51cis1ay1qgs3gj].[usr:Calculation_1439463031513284614:nk:2]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[federated.0e6imby1xr9yf51cis1ay1qgs3gj].[sum:Calculation_448671113300914177:qk]' scope='rows' value='' />
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+            <format attr='tick-color' value='#00000000' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='border-width' data-class='total' value='0' />
+            <format attr='border-style' data-class='total' value='none' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='font-weight' field='[federated.0e6imby1xr9yf51cis1ay1qgs3gj].[none:dealer_id:nk]' value='bold' />
+            <format attr='color' field='[federated.0e6imby1xr9yf51cis1ay1qgs3gj].[none:dealer_id:nk]' value='#000000' />
+            <format attr='font-weight' field='[federated.0e6imby1xr9yf51cis1ay1qgs3gj].[sum:Calculation_448671113300914177:qk]' value='bold' />
+            <format attr='color' field='[federated.0e6imby1xr9yf51cis1ay1qgs3gj].[sum:Calculation_448671113300914177:qk]' value='#000000' />
+          </style-rule>
+          <style-rule element='pane'>
+            <format attr='border-width' data-class='total' value='0' />
+            <format attr='border-style' data-class='total' value='none' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#00000000' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='rows' value='false' />
+            <format attr='display-field-labels' scope='cols' value='false' />
+          </style-rule>
+          <style-rule element='dropline'>
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+          <style-rule element='refline'>
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+          <style-rule element='gridline'>
+            <format attr='stroke-size' scope='cols' value='0' />
+            <format attr='line-visibility' scope='cols' value='off' />
+            <format attr='stroke-size' scope='rows' value='0' />
+            <format attr='line-visibility' scope='rows' value='off' />
+          </style-rule>
+          <style-rule element='zeroline'>
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+          <style-rule element='legend'>
+            <format attr='font-weight' value='bold' />
+          </style-rule>
+          <style-rule element='legend-title-text'>
+            <format attr='color' field='[federated.0e6imby1xr9yf51cis1ay1qgs3gj].[usr:Calculation_1439463031513284614:nk:2]' value=''>
+              <formatted-text />
+            </format>
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='2' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0e6imby1xr9yf51cis1ay1qgs3gj].[usr:Calculation_1439463031513284614:nk:2]' />
+              <text column='[federated.0e6imby1xr9yf51cis1ay1qgs3gj].[usr:Calculation_448671113302806530:qk:3]' />
+            </encodings>
+            <customized-tooltip>
+              <formatted-text>
+                <run fontcolor='#757575'>Dealer Id:&#9;</run>
+                <run bold='true'><![CDATA[<[federated.0e6imby1xr9yf51cis1ay1qgs3gj].[none:dealer_id:nk]>]]></run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#757575'>Composite KPI Score:&#9;</run>
+                <run bold='true'><![CDATA[<[federated.0e6imby1xr9yf51cis1ay1qgs3gj].[sum:Calculation_448671113300914177:qk]>]]></run>
+              </formatted-text>
+            </customized-tooltip>
+            <style>
+              <style-rule element='datalabel'>
+                <format attr='color-mode' value='auto' />
+                <format attr='font-weight' value='bold' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+              <style-rule element='trendline'>
+                <format attr='stroke-size' value='0' />
+                <format attr='line-visibility' value='off' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0e6imby1xr9yf51cis1ay1qgs3gj].[sum:Calculation_448671113300914177:qk]</rows>
+        <cols>[federated.0e6imby1xr9yf51cis1ay1qgs3gj].[none:dealer_id:nk]</cols>
+      </table>
+      <simple-id uuid='{4E7D2473-C96F-47A1-81A9-333D0A8E166A}' />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard enable-sort-zone-taborder='true' name='Dashboard 1'>
+      <style>
+        <style-rule element='dash-text'>
+          <format attr='text-align' id='dash-text_4' value='center' />
+        </style-rule>
+      </style>
+      <size maxheight='768' maxwidth='1366' minheight='768' minwidth='1366' preset-index='0' sizing-mode='fixed' />
+      <zones>
+        <zone h='100000' id='3' is-centered='0' is-scaled='1' param='Image/gradient-soft-solid-color-4k-4e.jpg' type-v2='bitmap' w='100000' x='0' y='0' />
+        <zone h='100000' id='10' name='Box' show-title='false' w='100000' x='0' y='0' />
+        <zone forceUpdate='true' h='5729' id='4' type-v2='text' w='27452' x='1611' y='2474'>
+          <formatted-text>
+            <run fontcolor='#ffffff' fontname='Tableau Semibold' fontsize='22'>REGIONAL PERFORMANCE</run>
+          </formatted-text>
+        </zone>
+        <zone forceUpdate='true' h='5729' id='11' type-v2='text' w='57394' x='32870' y='2474'>
+          <formatted-text>
+            <run fontcolor='#ffffff' fontname='Tableau Semibold' fontsize='22'>CUSTOMER EXPERIENCE AND REVENUE PERFORMANCE</run>
+          </formatted-text>
+        </zone>
+        <zone forceUpdate='true' h='5729' id='12' type-v2='text' w='46852' x='32943' y='46615'>
+          <formatted-text>
+            <run fontcolor='#ffffff' fontname='Tableau Semibold' fontsize='22'>DEALER NETWORK PERFORMANCE INSIGHTS</run>
+          </formatted-text>
+        </zone>
+        <zone h='24740' id='13' name='CSI by Region' show-title='false' w='30747' x='1098' y='12891'>
+          <layout-cache cell-count-h='4' non-cell-size-h='30' type-h='cell' type-w='fixed' />
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='4' />
+          </zone-style>
+        </zone>
+        <zone forceUpdate='true' h='3906' id='17' type-v2='text' w='7321' x='1830' y='9115'>
+          <formatted-text>
+            <run fontalignment='1' fontcolor='#000000' fontname='Tableau Regular' fontsize='12'>CSI Score</run>
+          </formatted-text>
+        </zone>
+        <zone h='24740' id='18' name='Retention by Region' show-title='false' w='30747' x='1464' y='41536' />
+        <zone forceUpdate='true' h='3906' id='19' type-v2='text' w='9736' x='2416' y='37370'>
+          <formatted-text>
+            <run fontalignment='1' fontcolor='#000000' fontname='Tableau Regular' fontsize='12'>Retention Rates</run>
+          </formatted-text>
+        </zone>
+        <zone forceUpdate='true' h='3906' id='20' type-v2='text' w='10469' x='2050' y='66406'>
+          <formatted-text>
+            <run fontalignment='1' fontcolor='#000000' fontname='Tableau Regular' fontsize='12'>Service Revenue</run>
+          </formatted-text>
+        </zone>
+        <zone h='24740' id='21' name='ServRev by Region' show-title='false' w='30600' x='1171' y='70964' />
+        <zone h='31901' id='22' name='CSI PartRev Over Time' show-title='false' w='30673' x='33236' y='13151' />
+        <zone h='32031' id='23' name='CSI ServRev Scat' show-title='false' w='31918' x='65300' y='13151' />
+        <zone h='13672' id='24' name='CSI ServRev Scat' pane-specification-id='0' param='[federated.0e6imby1xr9yf51cis1ay1qgs3gj].[none:region:nk]' type-v2='color' w='6955' x='90776' y='12760' />
+        <zone h='7552' id='27' name='CSI PartRev Over Time' pane-specification-id='1' param='[federated.0e6imby1xr9yf51cis1ay1qgs3gj].[:Measure Names]' type-v2='color' w='10249' x='51684' y='13802' />
+        <zone forceUpdate='true' h='3906' id='28' type-v2='text' w='24378' x='33382' y='9245'>
+          <formatted-text>
+            <run fontalignment='1' fontcolor='#000000' fontname='Tableau Regular' fontsize='12'>Avg. CSI Score and Parts Revenue Overtime</run>
+          </formatted-text>
+        </zone>
+        <zone forceUpdate='true' h='3906' id='29' type-v2='text' w='20205' x='65081' y='9245'>
+          <formatted-text>
+            <run fontalignment='1' fontcolor='#000000' fontname='Tableau Regular' fontsize='12'>Service Revenue (Y) vs. CSI Score (X)</run>
+          </formatted-text>
+        </zone>
+        <zone h='36458' id='30' name='TOPBOT Dealerships' show-title='false' w='31186' x='33309' y='58203' />
+        <zone h='5208' id='31' name='TOPBOT Dealerships' pane-specification-id='2' param='[federated.0e6imby1xr9yf51cis1ay1qgs3gj].[usr:Calculation_1439463031513284614:nk:2]' show-title='false' type-v2='color' w='6003' x='57687' y='57292' />
+        <zone forceUpdate='true' h='3906' id='32' type-v2='text' w='20717' x='33163' y='53646'>
+          <formatted-text>
+            <run fontalignment='1' fontcolor='#000000' fontname='Tableau Regular' fontsize='12'>Top/Bottom Performing Dealerships</run>
+          </formatted-text>
+        </zone>
+        <zone h='36198' id='33' name='Region Warranty Heatmap' show-title='false' w='31259' x='65081' y='57422' />
+        <zone forceUpdate='true' h='3906' id='34' type-v2='text' w='26354' x='65154' y='53646'>
+          <formatted-text>
+            <run fontalignment='1' fontcolor='#000000' fontname='Tableau Regular' fontsize='12'>Warranty Claims Heatmap by Region Overtime</run>
+          </formatted-text>
+        </zone>
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='3150' minheight='3150' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='38' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='97916' id='37' param='vert' type-v2='layout-flow' w='98828' x='586' y='1042'>
+                <zone fixed-size='280' h='100000' id='3' is-centered='0' is-fixed='true' is-scaled='1' param='Image/gradient-soft-solid-color-4k-4e.jpg' type-v2='bitmap' w='100000' x='0' y='0'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='100000' id='10' is-fixed='true' name='Box' show-title='false' w='100000' x='0' y='0'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone forceUpdate='true' h='5729' id='4' type-v2='text' w='27452' x='1611' y='2474'>
+                  <formatted-text>
+                    <run fontcolor='#ffffff' fontname='Tableau Semibold' fontsize='22'>REGIONAL PERFORMANCE</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone forceUpdate='true' h='5729' id='11' type-v2='text' w='37262' x='32870' y='2474'>
+                  <formatted-text>
+                    <run fontcolor='#ffffff' fontname='Tableau Semibold' fontsize='22'>CUSTOMER EXPERIENCE AND REVENUE PERFORMANCE</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone forceUpdate='true' h='3906' id='17' type-v2='text' w='7321' x='1830' y='9115'>
+                  <formatted-text>
+                    <run fontalignment='1' fontcolor='#000000' fontname='Tableau Regular' fontsize='12'>CSI Score</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone forceUpdate='true' h='3906' id='28' type-v2='text' w='24378' x='33382' y='9245'>
+                  <formatted-text>
+                    <run fontalignment='1' fontcolor='#000000' fontname='Tableau Regular' fontsize='12'>Avg. CSI Score and Parts Revenue Overtime</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone forceUpdate='true' h='3906' id='29' type-v2='text' w='20205' x='65081' y='9245'>
+                  <formatted-text>
+                    <run fontalignment='1' fontcolor='#000000' fontname='Tableau Regular' fontsize='12'>Service Revenue (Y) vs. CSI Score (X)</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='182' h='24740' id='13' is-fixed='true' name='CSI by Region' show-title='false' w='30747' x='1098' y='12891'>
+                  <layout-cache cell-count-h='4' non-cell-size-h='30' type-h='cell' type-w='fixed' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='245' h='31901' id='22' is-fixed='true' name='CSI PartRev Over Time' show-title='false' w='30673' x='33236' y='13151'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='7552' id='27' name='CSI PartRev Over Time' pane-specification-id='1' param='[federated.0e6imby1xr9yf51cis1ay1qgs3gj].[:Measure Names]' type-v2='color' w='10249' x='51684' y='13802'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='246' h='32031' id='23' is-fixed='true' name='CSI ServRev Scat' show-title='false' w='31918' x='65300' y='13151'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='13672' id='24' name='CSI ServRev Scat' pane-specification-id='0' param='[federated.0e6imby1xr9yf51cis1ay1qgs3gj].[none:region:nk]' type-v2='color' w='6955' x='90776' y='12760'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone forceUpdate='true' h='3906' id='19' type-v2='text' w='9736' x='2416' y='37370'>
+                  <formatted-text>
+                    <run fontalignment='1' fontcolor='#000000' fontname='Tableau Regular' fontsize='12'>Retention Rates</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='190' h='24740' id='18' is-fixed='true' name='Retention by Region' show-title='false' w='30747' x='1464' y='41536'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone forceUpdate='true' h='5729' id='12' type-v2='text' w='46852' x='32943' y='46615'>
+                  <formatted-text>
+                    <run fontcolor='#ffffff' fontname='Tableau Semibold' fontsize='22'>DEALER NETWORK PERFORMANCE INSIGHTS</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone forceUpdate='true' h='3906' id='32' type-v2='text' w='20717' x='33163' y='53646'>
+                  <formatted-text>
+                    <run fontalignment='1' fontcolor='#000000' fontname='Tableau Regular' fontsize='12'>Top/Bottom Performing Dealerships</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone forceUpdate='true' h='3906' id='34' type-v2='text' w='26354' x='65154' y='53646'>
+                  <formatted-text>
+                    <run fontalignment='1' fontcolor='#000000' fontname='Tableau Regular' fontsize='12'>Warranty Claims Heatmap by Region Overtime</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='278' h='36198' id='33' is-fixed='true' name='Region Warranty Heatmap' show-title='false' w='31259' x='65081' y='57422'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='36458' id='30' is-fixed='true' name='TOPBOT Dealerships' show-title='false' w='31186' x='33309' y='58203'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='5208' id='31' name='TOPBOT Dealerships' pane-specification-id='2' param='[federated.0e6imby1xr9yf51cis1ay1qgs3gj].[usr:Calculation_1439463031513284614:nk:2]' show-title='false' type-v2='color' w='6003' x='57687' y='57292'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone forceUpdate='true' h='3906' id='20' type-v2='text' w='10469' x='2050' y='66406'>
+                  <formatted-text>
+                    <run fontalignment='1' fontcolor='#000000' fontname='Tableau Regular' fontsize='12'>Service Revenue</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='190' h='24740' id='21' is-fixed='true' name='ServRev by Region' show-title='false' w='30600' x='1171' y='70964'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{C17E3034-F1A2-4539-B545-A25D6E09CEAA}' />
+    </dashboard>
+  </dashboards>
+  <windows source-height='30'>
+    <window class='worksheet' name='CSI by Region'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{3FD6187C-3395-4BAE-AD5A-07E9C94BD940}' />
+    </window>
+    <window class='worksheet' name='Retention by Region'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{A0895470-3AB5-4C2B-8B26-96D5D8C1F914}' />
+    </window>
+    <window class='worksheet' name='ServRev by Region'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{034620E0-3EC1-49C1-B3D4-752CA7AE2682}' />
+    </window>
+    <window class='worksheet' name='CSI PartRev Over Time'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card param='[federated.0e6imby1xr9yf51cis1ay1qgs3gj].[none:region:nk]' type='filter' />
+            <card pane-specification-id='1' param='[federated.0e6imby1xr9yf51cis1ay1qgs3gj].[:Measure Names]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{BFEB6B95-818C-4F17-B634-296D449D4B74}' />
+    </window>
+    <window class='worksheet' name='CSI ServRev Scat'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.0e6imby1xr9yf51cis1ay1qgs3gj].[none:region:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{798ED594-2D70-4DC8-BEE6-3160718E649C}' />
+    </window>
+    <window class='worksheet' name='TOPBOT Dealerships'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='2' param='[federated.0e6imby1xr9yf51cis1ay1qgs3gj].[usr:Calculation_1439463031513284614:nk:2]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{EA0A342A-A583-4ADB-985B-EB787A978130}' />
+    </window>
+    <window class='worksheet' name='Region Warranty Heatmap'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.0e6imby1xr9yf51cis1ay1qgs3gj].[sum:warranty_claims:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{20899636-197F-4A39-9F39-A6965EDB57EE}' />
+    </window>
+    <window class='worksheet' name='ServRev and Turnaround'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.0e6imby1xr9yf51cis1ay1qgs3gj].[qr:month:ok]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{A4AEB3E1-3D4C-4B94-9C35-DAFDA8DEE169}' />
+    </window>
+    <window class='dashboard' maximized='true' name='Dashboard 1'>
+      <viewpoints>
+        <viewpoint name='Box'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='CSI PartRev Over Time'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='CSI ServRev Scat'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='CSI by Region'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Region Warranty Heatmap'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Retention by Region'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='ServRev by Region'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='TOPBOT Dealerships'>
+          <zoom type='entire-view' />
+        </viewpoint>
+      </viewpoints>
+      <active id='12' />
+      <simple-id uuid='{3374DFB9-51D4-46A7-81D0-1C24A844F553}' />
+    </window>
+    <window class='worksheet' name='Box'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{91B851DB-0BFC-4BB2-8194-352BB78B6630}' />
+    </window>
+  </windows>
+  <datagraph>
+    <graph>
+      <properties>
+        <default-execution-subgraph-guid value='e06ee5d8-86c5-4eaf-93e2-5c6fc6ddb7c8' />
+      </properties>
+      <node-execution-subgraphs>
+        <pair execution-subgraph-guid='e06ee5d8-86c5-4eaf-93e2-5c6fc6ddb7c8' node-guid='15f0ad51-1b84-497e-b54d-6327e3fa8cc2' />
+        <pair execution-subgraph-guid='e06ee5d8-86c5-4eaf-93e2-5c6fc6ddb7c8' node-guid='b66e28b0-f8de-4528-a48a-149a4d8b79bb' />
+        <pair execution-subgraph-guid='e06ee5d8-86c5-4eaf-93e2-5c6fc6ddb7c8' node-guid='056df815-da00-49fe-bd92-049eb573a267' />
+        <pair execution-subgraph-guid='e06ee5d8-86c5-4eaf-93e2-5c6fc6ddb7c8' node-guid='3b32f46a-885a-4110-885a-9e7926e20f7e' />
+        <pair execution-subgraph-guid='e06ee5d8-86c5-4eaf-93e2-5c6fc6ddb7c8' node-guid='da01693d-a772-427c-b2d9-a3882deaf19c' />
+        <pair execution-subgraph-guid='e06ee5d8-86c5-4eaf-93e2-5c6fc6ddb7c8' node-guid='5f7a200f-0225-4049-a8b0-231473eb55b0' />
+        <pair execution-subgraph-guid='e06ee5d8-86c5-4eaf-93e2-5c6fc6ddb7c8' node-guid='bed157c2-ecb5-4b59-b1ec-35734ad04b6f' />
+        <pair execution-subgraph-guid='e06ee5d8-86c5-4eaf-93e2-5c6fc6ddb7c8' node-guid='881ceec8-cc12-44bb-99f7-39d81c3231ae' />
+        <pair execution-subgraph-guid='e06ee5d8-86c5-4eaf-93e2-5c6fc6ddb7c8' node-guid='7c450933-c533-4282-bf89-142fbb27ede3' />
+      </node-execution-subgraphs>
+      <nodes>
+        <_.fcp.DatagraphNodeAxisTitle.true...axis-title-node duplicate-index='0' fieldname='[federated.0e6imby1xr9yf51cis1ay1qgs3gj].[avg:retention_rate:qk]' node-guid='15f0ad51-1b84-497e-b54d-6327e3fa8cc2' orientation='horizontal' sheet-identifier='{D6F09603-9AD3-453A-A49D-80EA8174DED0}' title-input-guid='05d9ed1c-6d0e-4ed6-8ee8-a773e9b99d25' />
+        <_.fcp.DatagraphNodeAxisTitle.true...axis-title-node duplicate-index='0' fieldname='[federated.0e6imby1xr9yf51cis1ay1qgs3gj].[none:csi_score:qk]' node-guid='b66e28b0-f8de-4528-a48a-149a4d8b79bb' orientation='horizontal' sheet-identifier='{58DCA0A7-3EF7-4093-9125-F28AD2697185}' title-input-guid='c988aff3-461e-4960-96b8-a1869f69b6fc' />
+        <_.fcp.DatagraphNodeAxisTitle.true...axis-title-node duplicate-index='0' fieldname='[federated.0e6imby1xr9yf51cis1ay1qgs3gj].[sum:parts_revenue:qk]' node-guid='056df815-da00-49fe-bd92-049eb573a267' orientation='vertical' sheet-identifier='{77D815C5-4BDA-4773-A2A4-D4768CAE4F97}' title-input-guid='0a309ced-6a58-44e9-8b1b-6c64ef798e6c' />
+        <_.fcp.DatagraphNodeAxisTitle.true...axis-title-node duplicate-index='0' fieldname='[federated.0e6imby1xr9yf51cis1ay1qgs3gj].[avg:csi_score:qk]' node-guid='3b32f46a-885a-4110-885a-9e7926e20f7e' orientation='vertical' sheet-identifier='{77D815C5-4BDA-4773-A2A4-D4768CAE4F97}' title-input-guid='392c719e-daf0-4150-b321-4bd7439439a6' />
+        <_.fcp.DatagraphNodeAxisTitle.true...axis-title-node duplicate-index='0' fieldname='[federated.0e6imby1xr9yf51cis1ay1qgs3gj].[none:service_revenue:qk]' node-guid='da01693d-a772-427c-b2d9-a3882deaf19c' orientation='vertical' sheet-identifier='{58DCA0A7-3EF7-4093-9125-F28AD2697185}' title-input-guid='3660efce-38ae-4127-b71b-da5d1cb84d65' />
+        <single-value-field-node fieldname='[federated.0e6imby1xr9yf51cis1ay1qgs3gj].[Calculation_1439463031528960014]' fieldname-input-guid='fb9c4468-84a0-468c-87c3-6af997a91f5f' node-guid='5f7a200f-0225-4049-a8b0-231473eb55b0' value-output-guid='d4f7334e-2120-4af7-acfb-0031ee6ebf41' />
+        <_.fcp.DatagraphNodeAxisTitle.true...axis-title-node duplicate-index='0' fieldname='[federated.0e6imby1xr9yf51cis1ay1qgs3gj].[avg:csi_score:qk]' node-guid='bed157c2-ecb5-4b59-b1ec-35734ad04b6f' orientation='horizontal' sheet-identifier='{026232CB-AAA3-4651-B1B8-5936AA616E91}' title-input-guid='c8b400db-bcdd-4ef7-b1d8-36e95f0f735d' />
+        <_.fcp.DatagraphNodeAxisTitle.true...axis-title-node duplicate-index='0' fieldname='[federated.0e6imby1xr9yf51cis1ay1qgs3gj].[avg:service_revenue:qk]' node-guid='881ceec8-cc12-44bb-99f7-39d81c3231ae' orientation='horizontal' sheet-identifier='{19619764-39E9-4EB9-80A1-278D125A6D5F}' title-input-guid='6ef7addd-0749-4961-8c68-597364de6515' />
+        <_.fcp.DatagraphNodeAxisTitle.true...axis-title-node duplicate-index='0' fieldname='[federated.0e6imby1xr9yf51cis1ay1qgs3gj].[sum:Calculation_448671113300914177:qk]' node-guid='7c450933-c533-4282-bf89-142fbb27ede3' orientation='vertical' sheet-identifier='{4E7D2473-C96F-47A1-81A9-333D0A8E166A}' title-input-guid='91e24199-41b2-4872-8ccc-82137a83dded' />
+      </nodes>
+      <edges>
+        <edge from='d4f7334e-2120-4af7-acfb-0031ee6ebf41' to='c8b400db-bcdd-4ef7-b1d8-36e95f0f735d' />
+        <edge from='d4f7334e-2120-4af7-acfb-0031ee6ebf41' to='05d9ed1c-6d0e-4ed6-8ee8-a773e9b99d25' />
+        <edge from='d4f7334e-2120-4af7-acfb-0031ee6ebf41' to='6ef7addd-0749-4961-8c68-597364de6515' />
+        <edge from='d4f7334e-2120-4af7-acfb-0031ee6ebf41' to='3660efce-38ae-4127-b71b-da5d1cb84d65' />
+        <edge from='d4f7334e-2120-4af7-acfb-0031ee6ebf41' to='0a309ced-6a58-44e9-8b1b-6c64ef798e6c' />
+        <edge from='d4f7334e-2120-4af7-acfb-0031ee6ebf41' to='392c719e-daf0-4150-b321-4bd7439439a6' />
+        <edge from='d4f7334e-2120-4af7-acfb-0031ee6ebf41' to='c988aff3-461e-4960-96b8-a1869f69b6fc' />
+        <edge from='d4f7334e-2120-4af7-acfb-0031ee6ebf41' to='91e24199-41b2-4872-8ccc-82137a83dded' />
+      </edges>
+      <pin-values />
+    </graph>
+  </datagraph>
+</workbook>
